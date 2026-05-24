@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Premium Diamond Access</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,18 +13,21 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Oswald', sans-serif;
+    font-family:'Oswald',sans-serif;
 }
 
 body{
     background:#050505;
-    color:white;
+    color:#fff;
 }
 
+/* TOP BAR */
+
 .topbar{
+    width:100%;
     background:#000;
-    padding:18px;
     border-bottom:3px solid red;
+    padding:18px 25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -41,11 +44,11 @@ body{
 }
 
 .online{
-    color:#fff;
     font-size:18px;
+    letter-spacing:2px;
 }
 
-.green-dot{
+.dot{
     width:12px;
     height:12px;
     background:red;
@@ -54,49 +57,36 @@ body{
     margin-right:8px;
 }
 
+/* VIDEO */
+
 .hero{
-    width:100%;
     padding:20px;
 }
 
 .video-box{
-    position:relative;
     border:2px solid red;
+    border-radius:15px;
     overflow:hidden;
-    border-radius:10px;
+    box-shadow:0 0 25px rgba(255,0,0,0.3);
 }
 
-.video-box img{
+.video-box video{
     width:100%;
     display:block;
 }
 
-.play-btn{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:90px;
-    height:90px;
-    background:rgba(255,255,255,0.85);
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:40px;
-    color:black;
-}
+/* MAIN CARD */
 
 .section{
     padding:20px;
 }
 
 .card{
-    background:linear-gradient(135deg,#111,#1a0000);
+    background:linear-gradient(135deg,#0a0a0a,#1a0000);
     border:1px solid #ff0000;
-    border-radius:15px;
+    border-radius:18px;
     padding:25px;
-    box-shadow:0 0 20px rgba(255,0,0,0.2);
+    box-shadow:0 0 25px rgba(255,0,0,0.15);
 }
 
 .rating{
@@ -109,25 +99,32 @@ body{
 .stars{
     color:red;
     font-size:24px;
+    letter-spacing:2px;
 }
 
 .share-btn{
-    border:1px solid red;
-    padding:12px 30px;
-    color:white;
     background:transparent;
+    border:1px solid red;
+    color:white;
+    padding:12px 30px;
     font-size:18px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.share-btn:hover{
+    background:red;
 }
 
 .locked{
-    margin:25px 0;
+    width:100%;
     background:#222;
     border:1px solid #444;
-    text-align:center;
     padding:18px;
-    font-size:28px;
-    letter-spacing:3px;
+    text-align:center;
+    font-size:30px;
+    letter-spacing:4px;
+    margin:25px 0;
 }
 
 .badges{
@@ -138,68 +135,73 @@ body{
 
 .badge{
     border:1px solid red;
-    padding:8px 15px;
+    padding:8px 14px;
     color:#ff4d4d;
     font-size:14px;
+    letter-spacing:1px;
 }
 
-h1{
-    font-size:50px;
+.title{
+    font-size:52px;
     line-height:1.1;
-    margin-bottom:10px;
-    color:#fff;
+    margin-bottom:15px;
 }
 
 .desc{
-    color:#aaa;
+    color:#999;
     font-size:20px;
-    line-height:1.5;
+    line-height:1.6;
     margin-bottom:25px;
 }
+
+/* STATS */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:15px;
-    margin-top:20px;
 }
 
 .stat{
-    background:#0c0c0c;
+    background:#0d0d0d;
     border:1px solid #222;
     padding:20px;
     text-align:center;
+    border-radius:10px;
 }
 
 .stat h2{
     color:red;
-    font-size:30px;
+    font-size:32px;
 }
 
 .stat p{
     color:#999;
-    margin-top:5px;
-    font-size:14px;
+    margin-top:8px;
     letter-spacing:2px;
+    font-size:14px;
 }
 
+/* FEATURES */
+
 .features{
+    padding:20px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:15px;
-    padding:20px;
 }
 
 .feature{
     background:#111;
     border:1px solid #222;
+    border-radius:12px;
     text-align:center;
-    padding:25px 10px;
+    padding:30px 15px;
 }
 
 .feature h3{
     color:red;
-    font-size:32px;
+    font-size:36px;
     margin-bottom:10px;
 }
 
@@ -208,15 +210,25 @@ h1{
     letter-spacing:2px;
 }
 
+/* FOOTER */
+
 .footer{
     text-align:center;
-    padding:30px 20px;
-    color:#777;
+    padding:35px 20px;
+    color:#666;
     border-top:1px solid #222;
     margin-top:20px;
+    font-size:15px;
+    letter-spacing:2px;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
+
+    .title{
+        font-size:38px;
+    }
 
     .stats{
         grid-template-columns:repeat(2,1fr);
@@ -226,15 +238,22 @@ h1{
         grid-template-columns:1fr;
     }
 
-    h1{
-        font-size:36px;
+    .logo{
+        font-size:20px;
+    }
+
+    .online{
+        font-size:14px;
     }
 
 }
 
 </style>
 </head>
+
 <body>
+
+<!-- TOP BAR -->
 
 <div class="topbar">
 
@@ -243,25 +262,29 @@ h1{
     </div>
 
     <div class="online">
-        <span class="green-dot"></span>
+        <span class="dot"></span>
         1,309 ONLINE
     </div>
 
 </div>
 
+<!-- VIDEO SECTION -->
+
 <div class="hero">
 
     <div class="video-box">
 
-        <img src="https://www.image2url.com/r2/default/videos/1779131327794-10ddd02b-ad86-4148-9edf-0b88b9452b49.mp4" alt="preview">
+        <video autoplay muted controls loop playsinline>
 
-        <div class="play-btn">
-            ▶
-        </div>
+            <source src="https://www.image2url.com/r2/default/videos/1779131327794-10ddd02b-ad86-4148-9edf-0b88b9452b49.mp4" type="video/mp4">
+
+        </video>
 
     </div>
 
 </div>
+
+<!-- MAIN CONTENT -->
 
 <div class="section">
 
@@ -284,13 +307,20 @@ h1{
         </div>
 
         <div class="badges">
-            <div class="badge">✔ VERIFIED</div>
-            <div class="badge">MOST TRUSTED</div>
+
+            <div class="badge">
+                ✔ VERIFIED
+            </div>
+
+            <div class="badge">
+                MOST TRUSTED
+            </div>
+
         </div>
 
-        <h1>
+        <div class="title">
             UNLIMITED FREE DIAMOND
-        </h1>
+        </div>
 
         <div class="desc">
             FREE FIRE UNLIMITED DIAMOND <br>
@@ -325,6 +355,8 @@ h1{
 
 </div>
 
+<!-- FEATURES -->
+
 <div class="features">
 
     <div class="feature">
@@ -343,6 +375,8 @@ h1{
     </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <div class="footer">
     © 2026 — PREMIUM ACCESS — ALL RIGHTS RESERVED
